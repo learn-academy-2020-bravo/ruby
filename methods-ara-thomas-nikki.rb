@@ -35,13 +35,17 @@ puts "Input your Password"
 user_password = gets.chomp
 
 if user_id == user_password
-  puts "they can't be the same"
+  puts "User ID and password can't be the same"
 elsif user_id.length < 6 || user_password.length < 6
   puts "User ID or Password is too short"
-elsif !user_password.include?'!' && !user_password.include?'$' && !user_password.include?'#'
-  puts "password should include '!$#'"
+elsif !user_password.include?('!') && !user_password.include?('$') && !user_password.include?('#')
+  puts "Password should include '!$#'"
+elsif user_id.include?('!') || user_id.include?('$') || user_id.include?('#') || user_id.include?(' ')
+  puts "User ID cannot include '!$# or whitespace'"
+elsif !user_password.include?('0') && !user_password.include?('1') && !user_password.include?('2') && !user_password.include?('3') && !user_password.include?('4') && !user_password.include?('5') && !user_password.include?('6') && !user_password.include?('7') && !user_password.include?('8') && !user_password.include?('9')
+  puts "Password needs a number"
 else
-  puts "you are good"
+  puts "User ID and password are acceptable"
 end
 
 
