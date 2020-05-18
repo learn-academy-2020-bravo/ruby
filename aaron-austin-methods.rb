@@ -36,10 +36,12 @@ p 'Please enter a Password (Note: User Id and Password cannot be the same)'
     password = gets.chomp
   elsif user_id.length <= 5 || password.length <= 5
     p 'User ID and Password must be at least 6 characters long.'
-  # elsif password.include?  == false
-  #   p "Password must contain '!#$'"
-  # elsif user_id.include?  == true
-  #   p "User ID cannot contain '!,_,#,$'"
+ elsif !password.include? "!" || "#" || "$"
+   puts 'Password must contain at least one of: !#$'
+ elsif user_id.include? "!" || "#" || "$"
+   puts 'User ID cannot contain the following characters: !#$'
+ elsif user_id =~ /\s/
+   puts 'User ID cannot contain spaces'
   elsif password == 'password'
     p 'Password cannot be Password'
   else
