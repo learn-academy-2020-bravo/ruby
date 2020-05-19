@@ -3,7 +3,7 @@
 
 num = 1
 20.times do
-    # p num 
+    # p num
     num +=1
 end
 
@@ -21,8 +21,8 @@ num = (0..20)
 
 def is_even num
     array = num.to_a.reverse
-    array.each do |value| 
-        if value.even? 
+    array.each do |value|
+        if value.even?
             p value
         end
     end
@@ -81,8 +81,8 @@ def lil_guy array
     p array.first
 end
 
-lil_guy small_nums
-lil_guy smaller_nums
+# lil_guy small_nums
+# lil_guy smaller_nums
 
 
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
@@ -90,14 +90,59 @@ lil_guy smaller_nums
 random_nums = [34, 67, 45, 38, 111, 27, 2, 98, 3, 21, 69]
 
 def sorting_for_odds array
-    array.each do |value| 
-        if value.odd? 
-            p value
+  odds_only = []
+  array.each do |value|
+        if value.odd?
+            odds_only.push(value)
         end
-    end
+  odds_only.sort!
+  end
+    p odds_only
+end
+sorting_for_odds random_nums
+# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
+
+wonky_words = ['SmiLE', 'JuICe', 'MAyoNaIsE', 'DOG', 'balloon']
+
+def reverse_wonkifying array
+  array.map! do |value|
+    value.swapcase
+  end
+  p array
 end
 
-# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
-# Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
+# reverse_wonkifying wonky_words
+
+# Create a method that takes in an array of words and returns all the words that start with a particular letter.
+# Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
+
+favorite_fish = ['clown', 'tuna', 'shark', 'dory', 'salmon', 'trigger', 'catfish']
+
+def one_letter array, letter
+  array.select do |value|
+    value.start_with?(letter)
+  end
+end
+
+p one_letter favorite_fish,('c')
+
 # FIZZBUZZ
 # Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+
+nums = (1..100)
+
+def fizz_buzz num
+  num.each do |value|
+    if value % 15 == 0
+      p 'fizzbuzz'
+    elsif value % 5 == 0
+      p 'buzz'
+    elsif value % 3 == 0
+      p 'fizz'
+    else
+      p value
+    end
+  end
+end
+
+fizz_buzz nums
