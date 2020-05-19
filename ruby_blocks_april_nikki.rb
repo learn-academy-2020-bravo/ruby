@@ -70,15 +70,15 @@
 
 
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
-num = [2, 45, 4, 5, 60,15]
-
-def odd_sort array
-   array.sort.select do |value|
-    value.odd?
-  end
-end
-p odd_sort num
-
+# num = [2, 45, 4, 5, 60,15]
+#
+# def odd_sort array
+#    array.sort.select do |value|
+#     value.odd?
+#   end
+# end
+# p odd_sort num
+#
 
 # Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
 
@@ -95,26 +95,28 @@ p odd_sort num
 # Story: As a developer, I can create a Task.
 
 class Tasks
-  def initialize(task, title)
-    @task = task 
+  def initialize(title, description, status)
     @title = title
+    @description = description
+    @status = status
   end
-  def get_task
-    @task
+  def get_title
     @title
   end
+  def get_description
+    @description
+  end
+  def get_status
+    @status
+  end
 end
-
-laundry = Tasks.new
-laundry
-
-
-
 # Story: As a developer, I can give a Task a title and retrieve it.
-
+laundry = Tasks.new("laundry","fluff and fold","done")
+p laundry.get_status
 
 
 # Story: As a developer, I can give a Task a description and retrieve it.
+
 
 # Story: As a developer, I can mark a Task done.
 
