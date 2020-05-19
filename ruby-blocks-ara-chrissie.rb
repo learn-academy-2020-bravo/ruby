@@ -144,15 +144,15 @@ while num <= 99
 end
 #OR
 def fizzbuzz number
-  (1..number).each do |i|
-    if i % 3 == 0 && i % 5 == 0
-      puts 'fizzbuzz'
-    elsif i % 3 == 0
-      puts 'fizz'
-    elsif i % 5 == 0
-      puts 'buzz'
+  (1..number).each do |value|
+    if value % 3 == 0 && value % 5 == 0
+      puts 'FIZZBUZZ'
+    elsif value % 3 == 0
+      puts 'FIZZ'
+    elsif value % 5 == 0
+      puts 'BUZZ'
     else
-      puts i
+      puts value
     end
   end
 end
