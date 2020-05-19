@@ -87,3 +87,35 @@ p odd_sort num
 
 # FIZZBUZZ
 # Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+
+
+###Classes
+
+# User Stories
+# Story: As a developer, I can create a Task.
+
+class Tasks
+  def initialize(task, title)
+    @task = task 
+    @title = title
+  end
+  def get_task
+    @task
+    @title
+  end
+end
+
+laundry = Tasks.new
+laundry
+
+
+
+# Story: As a developer, I can give a Task a title and retrieve it.
+
+
+
+# Story: As a developer, I can give a Task a description and retrieve it.
+
+# Story: As a developer, I can mark a Task done.
+
+# Story: As a developer, when I print a Task that is done, its status is shown.
