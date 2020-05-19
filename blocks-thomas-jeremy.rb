@@ -58,23 +58,24 @@
 #
 # puts ascending_odds numbers
 
-# words = ["HeLlO", "HhHhHuUuIiI", "OoooWpL"]
-# def switch_casing array
-#   array.map do |value|
-#     final = ''
-#     value.each_char { |c|
-#       if c == c.downcase
-#         final += c.upcase
-#       else
-#         final += c.downcase
-#       end
-#     }
-#     value = final
-#   end
-# end
-#
-# puts switch_casing words
+words = ["HeLlO", "HhHhHuUuIiI", "OoooWpL"]
+def switch_casing array
+  array.map! do |value|
+    final = ''
+    value.each_char do |c|
+      if c == c.downcase
+        final += c.upcase
+      else
+        final += c.downcase
+      end
+    end
+    value = final
+  end
+end
 
+# p words
+# puts switch_casing words
+# p words
 
 # words = ["peLlO", "ahHhHuUuIiI", "ooooWpL", "pppw"]
 # letter_p = 'p'
@@ -85,3 +86,44 @@
 # end
 #
 # puts certain_word words, letter_p
+
+def fizz_buzz
+  num = 0
+  100.times do
+    num +=1
+    if num % 5 == 0 && num % 3 == 0
+      puts 'FizzBuzz'
+    elsif num % 5 == 0
+      puts 'Buzz'
+    elsif num % 3 == 0
+      puts 'Fizz'
+    else
+      puts num
+    end
+  end
+end
+
+# puts fizz_buzz
+
+# num = 1
+# while num <=10
+#   puts num
+#   num += 1
+# end
+
+
+def fizz_buzz
+  [*1..100].map do |num|
+    if num % 5 == 0 && num % 3 == 0
+      'FizzBuzz'
+    elsif num % 5 == 0
+      'Buzz'
+    elsif num % 3 == 0
+      'Fizz'
+    else
+      num
+    end
+  end
+end
+
+# p fizz_buzz
