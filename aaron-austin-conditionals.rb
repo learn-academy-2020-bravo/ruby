@@ -25,6 +25,3 @@ elsif  player2 == 'scissors' && player1 == 'paper'
   p "player two Wins"
 elsif  player2 == 'paper' && player1 == 'rock'
   p "player two Wins"
-
-
-end
