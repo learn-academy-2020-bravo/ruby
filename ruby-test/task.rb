@@ -18,20 +18,12 @@ class Task
   end
 
   def progress_done
-    
     @progress = 'done'
   end
-  # def get_title
-  #   "#{@title}"
-  # end
-  #
-  # #
-  # def get_descrip
-  #   "#{@description}"
-  # end
 end
-#
-# task1 = Task.new 'sweep'
-# p task1.get_title
-# task2 = Task.new 'dishes', 'oh how'
-# # p task2.get_descrip
+
+class Tasklist < Task
+  def initialize
+    @tasklist = []
+  end
+end
