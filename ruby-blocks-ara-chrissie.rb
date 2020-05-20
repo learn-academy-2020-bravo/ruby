@@ -110,18 +110,18 @@
 
 # Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
-fruits = ['Apple', 'Avocado', 'Banana', 'Mango']
+# fruits = ['Apple', 'Avocado', 'Banana', 'Mango']
 
-def particular_letter array
-  array.select do |value|
-    if value.downcase.start_with?("a")
-      p value
-    elsif value.downcase.start_with?("m")
-      p value
-    end
-  end
-end
-p particular_letter fruits
+# def particular_letter array
+#   array.select do |value|
+#     if value.downcase.start_with?("a")
+#       p value
+#     elsif value.downcase.start_with?("m")
+#       p value
+#     end
+#   end
+# end
+# p particular_letter fruits
 
 
 # FIZZBUZZ
