@@ -1,7 +1,12 @@
 class Car
   def initialize model, year
+<<<<<<< HEAD
+    @model = "generic car"
+    @year= "my_car year"
+=======
     @model = 'generic car'
     @year= 'my_car year'
+>>>>>>> 4a39d40b4b012a3d9c0b5a2e3ba55f567527d158
     @wheels= 4
     @lights= 'off'
     @turnsignal= 'off'
@@ -67,6 +72,9 @@ class Tesla < Car
     def decelerate
       @speed = @speed - 7
     end
+
+
+
 
   end
 
