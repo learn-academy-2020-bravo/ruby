@@ -7,6 +7,7 @@ class Car
     @lights = "off"
     @turn_signal = "off"
     @speed = 0
+    @model_years = []
   end
 
   def light_switch
@@ -33,6 +34,15 @@ class Car
     "My car is a #{@model} and year #{@year} and is currently at the speed of #{@speed} mph and the lights are #{@lights}"
   end
 
+  def add_model_years (year)
+    @model_years << year
+  end
+
+  
+
+  def show_collection
+    "This is my collection #{@model_years}"
+  end
 end
 
 class Tesla < Car
@@ -40,6 +50,7 @@ class Tesla < Car
     super(model, year)
       @model = model
       @year = year
+      
   end
 
   def tesla_speed
@@ -48,6 +59,14 @@ class Tesla < Car
 
   def tesla_brake
     @speed -= 7
+  end
+
+  def get_year
+    @year
+  end
+
+  def get_model
+    @model
   end
 end
 
@@ -65,6 +84,8 @@ class Toyota < Car
   def toyota_brake
     @speed -= 5
   end
+
+  
 end
 
 class Honda < Car
@@ -83,18 +104,47 @@ class Honda < Car
   end
 end
 
-my_tesla = Tesla.new("x2020", 2021)
+# my_tesla = Tesla.new("x2020", 2021)
 
 my_toyota = Toyota.new("camery", 1997)
 
 my_honda = Honda.new("accord", 1889)
 
-my_tesla.tesla_speed
-my_tesla.tesla_brake
+# my_tesla.tesla_speed
+# my_tesla.tesla_brake
 
-my_honda.honda_speed #+5
-my_honda.honda_speed #+5
-my_honda.honda_brake #-2
+# my_honda.honda_speed #+5
+# my_honda.honda_speed #+5
+# my_honda.honda_brake #-2
 
-my_tesla.light_switch
-p my_tesla.get_info
+# my_tesla.light_switch
+# p my_tesla.get_info
+
+class Garage
+    def initialize
+        @collection = []
+    end
+
+    def get_collection
+        @collection
+    end
+
+
+end
+
+tesla_2 = Tesla.new("Model 3", 1969)
+
+tesla_2.add_model_years tesla_2.get_model
+
+tesla_3 = Tesla.new("Model 3", 19420)
+
+my_garage = Garage.new
+
+my_garage.get_collection << tesla_3.get_model
+my_garage.get_collection << tesla_2.get_model
+
+p my_garage.get_collection
+
+
+
+
