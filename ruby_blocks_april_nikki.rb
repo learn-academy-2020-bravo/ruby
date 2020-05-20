@@ -94,15 +94,16 @@
 
 # Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
-# array2 = ['Apple', 'Avocado', 'Banana', 'Mango']
+array2 = ['Apple', 'Avocado', 'Banana', 'Mango']
 
-# def new_method(array, letter)
-#   array.select do |value|
-#     value.downcase.start_with?(letter)
-#   end
-# end
-# p new_method array2, "a"
-# p new_method array2, "m"
+def new_method(array, letter)
+  array.select do |value|
+    value.downcase.start_with?(letter)
+  end
+end
+p new_method array2, "a"
+p new_method array2, "m"
+
 
 
 # FIZZBUZZ
@@ -111,18 +112,18 @@
 # for multiples of five print Buzz instead of the number, 
 # for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
 
-nums = 1..100
-nums.each do |value|
-    if value % 3 == 0
-        p 'Fizz'
-    elsif value % 5 == 0
-      p 'Buzz'
-    elsif value % 3 == 0 && value % 5 == 0
-        p 'FizzBuzz'
-    else
-      p value
-    end
-end
+# nums = 1..100
+# nums.each do |value|
+#     if value % 3 == 0
+#         p 'Fizz'
+#     elsif value % 5 == 0
+#       p 'Buzz'
+#     elsif value % 3 == 0 && value % 5 == 0
+#         p 'FizzBuzz'
+#     else
+#       p value
+#     end
+# end
 
 
 
