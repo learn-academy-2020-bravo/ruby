@@ -68,14 +68,37 @@
 
 
 
-(1..100).each do |value|
-  if value % 3 == 0 && value % 5 == 0
-    p 'fizzbuzz'
-  elsif value % 5 == 0
-    p 'buzz'
-  elsif value % 3 == 0
-    p 'fizz'
-  else
-    p value
+# (1..100).each do |value|
+#   if value % 3 == 0 && value % 5 == 0
+#     p 'fizzbuzz'
+#   elsif value % 5 == 0
+#     p 'buzz'
+#   elsif value % 3 == 0
+#     p 'fizz'
+#   else
+#     p value
+# end
+# end
+
+
+
+fruits = ['Apple', 'Avocado','Master', 'Banana', 'Mango']
+def more_fruits array
+   emptyA = []
+   emptyB = []
+   emptyM = []
+  array.select! do | value |
+    if value.include?"A"
+     value
+  
+    elsif value.include?"M"
+    value
+  
+    elsif value.include?"B"
+    value
+    
+    end
+  end
 end
-end
+
+p more_fruits fruits
