@@ -34,16 +34,13 @@ class TaskList
   end
 
   def completed_tasks
-      tasks.select { |task| task.status == 'done' }
+      @tasks.select { |task| task.status == 'done' }
   end
 
   def incompleted_tasks
-      tasks.select { |task| task.status == 'in progress'}
+      @tasks.select { |task| task.status == 'in progress'}
   end
-  
 end
-
-
 
 
 

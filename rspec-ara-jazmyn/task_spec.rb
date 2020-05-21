@@ -44,13 +44,13 @@ describe TaskList do
   end
 
   it 'prints completed tasks' do
-    completed_tasks = TaskList.new
-    expect(tasks.status).to be_a Array
+    done_tasks = TaskList.new
+    expect(done_tasks.completed_tasks).to be_a Array
   end
 
   it 'prints incompleted tasks' do
-    incompleted_tasks = TaskList.new
-    expect(tasks.status).to be_a Array
+    undone_tasks= TaskList.new
+    expect(undone_tasks.incompleted_tasks).to be_a Array
   end
 
 end
